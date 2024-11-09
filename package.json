@@ -1,6 +1,6 @@
 {
   "name": "inject-markdown-cli",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Inject Markdown CLI tool that can be used with pre-commit hooks",
   "publishConfig": {
     "access": "public",
