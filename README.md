@@ -32,3 +32,9 @@ npm install -g git+https://github.com/streetsidesoftware/inject-markdown-cli
 `inject-markdown-cli --help`:
 
 <!--- @@inject: static/help.txt --->
+
+```
+
+```
+
+<!--- @@inject-end: static/help.txt --->
