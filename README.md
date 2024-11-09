@@ -12,7 +12,7 @@ This repository enables using [inject-markdown](https://github.com/streetsidesof
 # .pre-commit-config.yaml
 repos:
   - repo: https://github.com/streetsidesoftware/inject-markdown-cli
-    rev: v3.1.1
+    rev: v3.1.2
     hooks:
       - id: inject-markdown
 ```
