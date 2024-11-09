@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.1.2](https://github.com/streetsidesoftware/inject-markdown-cli/compare/v3.1.1...v3.1.2) (2024-11-09)
+
+
+### Trivial updates and changes.
+
+* Adjust repo url ([f44c0e6](https://github.com/streetsidesoftware/inject-markdown-cli/commit/f44c0e67df356f75fe27856736fa6591e4dd685c))
+* fix signing. ([3e7aba9](https://github.com/streetsidesoftware/inject-markdown-cli/commit/3e7aba94741a71bff1ab546d33ad7e62bd206e03))
+* Update Inject Markdown version (3.1.4) ([#8](https://github.com/streetsidesoftware/inject-markdown-cli/issues/8)) ([60a745a](https://github.com/streetsidesoftware/inject-markdown-cli/commit/60a745a4e6803138f252ab8a7d2f98778dce5413))
+
 ## [3.1.1](https://github.com/streetsidesoftware/inject-markdown-cli/compare/v3.1.0...v3.1.1) (2024-11-09)
 
 
