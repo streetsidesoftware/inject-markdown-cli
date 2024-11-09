@@ -7,6 +7,9 @@
     "provenance": true
   },
   "type": "module",
+  "bin": {
+    "inject-markdown-cli": "./index.js"
+  },
   "scripts": {
     "lint:fix": "prettier --write .",
     "build:readme": "npm run build:help && inject-markdown README.md",
