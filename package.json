@@ -2,8 +2,14 @@
   "name": "inject-markdown-cli",
   "version": "3.0.0",
   "description": "Inject Markdown CLI tool that can be used with pre-commit hooks",
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
   "scripts": {
+    "build:readme": "npm run build:help && inject-markdown README.md",
+    "build:help": "node index.js --help > static/help.txt",
     "test": "node ./index.js ."
   },
   "repository": {

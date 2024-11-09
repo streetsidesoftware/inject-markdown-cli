@@ -18,3 +18,17 @@ repos:
 ```
 
 <!-- x-release-please-end -->
+
+## Install from GitHub
+
+This repo also supports installing the `inject-markdown-cli` directly from GitHub:
+
+```
+npm install -g git+https://github.com/streetsidesoftware/inject-markdown-cli
+```
+
+## Usage
+
+`inject-markdown-cli --help`:
+
+<!--- @@inject: static/help.txt --->

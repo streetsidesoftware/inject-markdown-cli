@@ -51,10 +51,6 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Lint Fix
-        run: |
-          npm run lint:fix
-
       - name: Git Status
         id: git-status
         uses: streetsidesoftware/actions/public/dirty@v1
