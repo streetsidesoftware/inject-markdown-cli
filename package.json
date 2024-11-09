@@ -40,7 +40,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "inject-markdown": "^3.1.1"
+    "inject-markdown": "^3.1.4"
   },
   "devDependencies": {
     "prettier": "^3.3.3"
