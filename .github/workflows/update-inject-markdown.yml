@@ -19,7 +19,7 @@ on:
     - cron: "0 7 * * *"
 
 jobs:
-  update-cspell:
+  update-inject-markdown:
     if: github.repository_owner == 'streetsidesoftware'
     runs-on: ubuntu-latest
     env:
@@ -46,24 +46,24 @@ jobs:
         run: |
           npm i
 
-      - name: CSpell Old Version
-        run: echo CSPELL_VERSION_OLD=$(npx cspell -V) >> $GITHUB_ENV
+      - name: Old Version
+        run: echo IMD_VERSION_OLD=$(npx inject-markdown -V) >> $GITHUB_ENV
 
-      - name: Update CSpell to latest
+      - name: Update inject-markdown to latest
         run: |
-          npm i cspell@latest
+          npm i inject-markdown@latest
 
-      - name: CSpell Version
-        run: echo CSPELL_VERSION=$(npx cspell -V) >> $GITHUB_ENV
+      - name: Version
+        run: echo IMD_VERSION=$(npx inject-markdown -V) >> $GITHUB_ENV
 
       - name: Minor Versions
         run: |
-          echo CSPELL_MINOR_OLD=$(echo '"${{ env.CSPELL_VERSION_OLD }}"' | jq 'sub("\\.[0-9]+$";"")') >> $GITHUB_ENV
-          echo CSPELL_MINOR_NEW=$(echo '"${{ env.CSPELL_VERSION }}"' | jq 'sub("\\.[0-9]+$";"")') >> $GITHUB_ENV
+          echo IMD_MINOR_OLD=$(echo '"${{ env.IMD_VERSION_OLD }}"' | jq 'sub("\\.[0-9]+$";"")') >> $GITHUB_ENV
+          echo IMD_MINOR_NEW=$(echo '"${{ env.IMD_VERSION }}"' | jq 'sub("\\.[0-9]+$";"")') >> $GITHUB_ENV
 
       - name: Determine Update type
         env:
-          type: ${{ (env.CSPELL_MINOR_OLD == env.CSPELL_MINOR_NEW && 'fix') || 'feat' }}
+          type: ${{ (env.IMD_MINOR_OLD == env.IMD_MINOR_NEW && 'fix') || 'feat' }}
         run: |
           echo PR_TYPE=$type >> $GITHUB_ENV
 
@@ -83,23 +83,23 @@ jobs:
         env:
           REPORT: |
             Dirty: ${{ steps.git-status.outputs.isDirty && 'yes' || 'no' }}
-            CSpell Version: ${{ env.CSPELL_VERSION }}
-            Old Version: ${{ env.CSPELL_VERSION_OLD }}
+            Current Version: ${{ env.IMD_VERSION }}
+            Old Version: ${{ env.IMD_VERSION_OLD }}
         run: |
           echo "$REPORT"
 
-      - name: CSpell Version Msg
-        id: cspell_version_msg
+      - name: Version Msg
+        id: IMD_VERSION_msg
         uses: streetsidesoftware/actions/public/output@v1
         with:
-          value: CSpell version (${{ env.CSPELL_VERSION }})
+          value: Inject Markdown version (${{ env.IMD_VERSION }})
 
       - name: Commit Message
         id: commit_message
         uses: streetsidesoftware/actions/public/output@v1
         with:
           value: >-
-            Update ${{ steps.cspell_version_msg.outputs.value }}
+            Update ${{ steps.IMD_VERSION_msg.outputs.value }}
 
       - name: Gen PR Body
         id: body
@@ -107,7 +107,7 @@ jobs:
         with:
           title: ${{ steps.commit_message.outputs.value }}
           message: |
-            **CSpell Version:** ${{ env.CSPELL_VERSION_OLD }} -> ${{ env.CSPELL_VERSION }}
+            **Inject Markdown Version:** ${{ env.IMD_VERSION_OLD }} -> ${{ env.IMD_VERSION }}
             **Type:** ${{ env.PR_TYPE }}
           path: >-
             package.json
