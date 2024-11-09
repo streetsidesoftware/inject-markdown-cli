@@ -8,6 +8,7 @@
   },
   "type": "module",
   "scripts": {
+    "lint:fix": "prettier --write .",
     "build:readme": "npm run build:help && inject-markdown README.md",
     "build:help": "node index.js --help > static/help.txt",
     "test": "node ./index.js ."
@@ -36,7 +37,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "inject-markdown": "^3.1.0"
+    "inject-markdown": "^3.0.0"
   },
   "devDependencies": {
     "prettier": "^3.3.3"

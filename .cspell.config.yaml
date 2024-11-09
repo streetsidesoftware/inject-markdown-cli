@@ -1,7 +1,7 @@
 ignorePaths:
   - .git/objects
   - .gitignore
-  - '*.sample'
+  - "*.sample"
   - CHANGELOG.md
   - node_modules
   - package-lock.json
