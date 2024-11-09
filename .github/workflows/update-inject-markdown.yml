@@ -1,4 +1,4 @@
-name: "  📚 Update Inject Markdown"
+name: "  📈 Update Inject Markdown"
 
 on:
   workflow_dispatch:
