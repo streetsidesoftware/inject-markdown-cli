@@ -1,0 +1,10 @@
+---
+# For use with pre-commit.
+# See usage instructions at http://pre-commit.com
+
+- id: inject-markdown
+  name: inject-markdown
+  description: This hook runs inject-markdown to inject files into the markdown files.
+  entry: inject-markdown-cli
+  language: node
+  types: [text]

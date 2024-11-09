@@ -1,0 +1,38 @@
+{
+  "name": "inject-markdown-cli",
+  "version": "3.0.0",
+  "description": "Inject Markdown CLI tool that can be used with pre-commit hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streetsidesoftware/inject-markdown-cli.git"
+  },
+  "keywords": [
+    "inject",
+    "markdown",
+    "pre-commit",
+    "hooks"
+  ],
+  "author": "Street Side Software",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/streetsidesoftware/inject-markdown-cli/issues"
+  },
+  "homepage": "https://github.com/streetsidesoftware/inject-markdown-cli#readme",
+  "files": [
+    ".pre-commit-hooks.yaml",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "inject-markdown": "^3.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

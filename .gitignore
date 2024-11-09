@@ -128,3 +128,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# cspell:ignore Microbundle Nuxt dotenv eslintcache jscoverage jspm pids stylelintcache vuepress wscript
