@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/streetsidesoftware/inject-markdown-cli/compare/v3.1.2...v3.2.0) (2026-11-18)
+
+
+### Features
+
+* Update Inject Markdown version (6.3.0) ([#13](https://github.com/streetsidesoftware/inject-markdown-cli/issues/13)) ([4b6dc36](https://github.com/streetsidesoftware/inject-markdown-cli/commit/4b6dc36e7f0d4f9eb2bc3d0cc60cf609fe8764bf))
+
 ## [3.1.2](https://github.com/streetsidesoftware/inject-markdown-cli/compare/v3.1.1...v3.1.2) (2024-11-09)
 
 
